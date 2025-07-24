@@ -4,6 +4,7 @@ import { DatabaseModule } from './database/database.module';
 import { ProductsModule } from './products/products.module';
 import { CommonModule } from './common/common.module';
 import { SeedModule } from './seed/seed.module';
+import { FilesModule } from './files/files.module';
 
 @Module({
   imports: [
@@ -11,7 +12,8 @@ import { SeedModule } from './seed/seed.module';
     DatabaseModule,
     ProductsModule,
     CommonModule,
-    SeedModule, // Import the DatabaseModule to provide the PostgreSQL connection pool
+    SeedModule,
+    FilesModule, // Import the DatabaseModule to provide the PostgreSQL connection pool
   ],
 })
 export class AppModule {}
